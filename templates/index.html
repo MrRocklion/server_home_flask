@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html>
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
   <body>
-    <h1>Live streaming</h1>
-    <div>
 
-        <img src="{{ url_for('video') }}" width="50%"/>
+    <div class = "container-fluid">
+      <h1>Sistema de Monitoreo David</h1>
+      <div class="row">
+        <div class="col-sm-9 col-md-6 col-lg-8">
+            <img src="{{ url_for('video') }}" />
+        </div>
+        <div class="col-sm-9 col-md-6 col-lg-8">
+          <button class="btn mt-3 btn-primary">MOVER IZQUIERDA</button>
+          <button class="btn btn-primary">MOVER DERECHA</button>
+          <!-- <div class="text-center mt-4">
+            <div class="row">
+              <div class="col-12">
+              <button class="btn btn-primary">MOVER DERECHA</button>
+            </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+              <button class="btn mt-3 btn-primary">MOVER IZQUIERDA</button>
+            </div>
+            </div>
+          </div> -->
+
+
+        </div>
+      </div>
+      
+
     </div>
             
     </body>
-
-
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
 </html>
