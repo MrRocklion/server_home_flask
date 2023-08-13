@@ -1,7 +1,10 @@
 from flask import Flask,render_template,Response
 import cv2
+from waitress import serve
+from flask_cors import CORS
 
 app=Flask(__name__)
+CORS(app)
 camera=cv2.VideoCapture(0)
 
 def generate_frames():
@@ -27,5 +30,9 @@ def index():
 def video():
     return Response(generate_frames(),mimetype='multipart/x-mixed-replace; boundary=frame')
 
-if __name__=="__main__":
-    app.run(debug=True)
+mode = "dev"
+if __name__ == '__main__':
+    if mode == "dev":
+        app.run(host='0.0.0.0', port=50100, debug=False)
+    else:
+        serve(app, host='0.0.0.0', port=50100, threads=4)
